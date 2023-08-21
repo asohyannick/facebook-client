@@ -1,0 +1,180 @@
+.form_container {
+    background:#059669;
+    width: 50%;
+    text-align: center;
+    padding-top:10px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.header {
+    color:#fff;
+    padding-bottom: 20px;
+    font-size: 40px;
+    padding-top: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.icons_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 10px 0px 10px 0px;
+}
+
+.social {
+    width: 50px;
+    background: none;
+    border-radius: 25px;
+}
+
+.lines_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 0px 0px 0px;
+}
+
+.lines {
+    width: 45%;
+}
+
+.last_text {
+    padding:30px 0px;
+    color: red;
+}
+
+.form_row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.form_show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 25px 0px 25px 0px;
+}
+
+.form_label {
+    border: 2px solid white;
+    border-right: none;
+    padding: 18px;
+    background:#059669;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.form_input {
+    padding: 18px;
+    width: 50%;
+    border: 2px solid white;
+    background: #fff;
+    color: #000;
+    font-size:18px;
+    border-left: none;
+}
+
+.btn_btn {
+    width: 50%;
+    background:#14b8a6;
+    color: #fff;
+    padding: 30px;
+    margin: 10px 0px 10px 0px;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn_btn:hover {
+    background:#2dd4bf;
+}
+
+.btn_btn:focus {
+    color: #059669;
+}
+
+.btn_btn:active {
+    background: #2dd4bf;
+}
+
+.account_owner {
+    padding: 20px 0px 20px 0px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.platformTwoFun {
+    padding: 10px;
+}
+
+.signIn_btn {
+    width: 70%;
+    padding: 20px;
+    background: #22c55e;
+    border: 1px solid white;
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signIn_btn:hover {
+    background: #059669;
+}
+
+.signIn_btn:focus {
+    background: #14b8a6;
+}
+
+.signIn_btn:active {
+    background: #2dd4bf;
+}
+
+@media(max-width:890px) {
+    .login_container {
+        display: none;
+    }
+    .form_container {
+        width:auto;
+        height: auto;
+        background: #059669;
+    }
+    .header {
+        font-size: 22px;
+        color: #fff;
+    }
+    .social {
+        width: 20%;
+    }
+    .lines {
+        width: 30%;
+    }
+    .form_label,
+    .form_input {
+        width: 45%;
+    }
+    .btn_btn {
+        padding: 20px;
+        width: 80%;
+        background: #663399;
+        cursor: pointer;
+    }
+    .btn_btn:hover {
+        background: #663399;
+    }
+    .btn_btn:focus {
+        color: #33a;
+    }
+    .btn_btn:active {
+        color: #6a5acd;
+    }
+}

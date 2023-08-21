@@ -4,8 +4,7 @@ import {default as About} from './about/About';
 import {default as Project} from './projects/Project';
 import {default as SignIn} from './signIn/SignIn';
 import {default as SignUp} from './signUp/SignUp';
-import {default as Sidebar} from './sidebar/Sidebar';
-
+import {default as Footer} from './footer/Footer'
 export {
     Navbar,
     Home,
@@ -13,5 +12,5 @@ export {
     Project,
     SignIn,
     SignUp,
-    Sidebar
+    Footer
 }

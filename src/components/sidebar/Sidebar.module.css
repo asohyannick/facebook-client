@@ -1,0 +1,87 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #2e8b57;
+    color: #fff;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    padding-top: 3%;
+    cursor: context-menu;
+}
+
+.sidebar_menu {
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    justify-content: center;
+}
+
+ul, li {
+    cursor: pointer;
+    padding: 2px;
+}
+
+.headings {
+    font-size: 22px;
+}
+
+@media(max-width:680px) {
+    .sidebar {
+        width: auto;
+        height: auto;
+    }
+    .sidebar_menu {
+        width: 100vw;
+        height: auto;
+        font-size: 16px;
+        color: #fff;
+    }
+    .headings {
+        font-size: 16px;
+    }
+}
+ @media(max-width:500px) {
+    .sidebar {
+        width: auto;
+        height: auto;
+    }
+    .sidebar_menu {
+        width: 100vw;
+        height: auto;
+        font-size: 16px;
+    }
+    .headings {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:450px) {
+    .sidebar {
+        width: auto;
+        height: auto;
+    }
+    .sidebar_menu {
+        width: 100vw;
+        height: auto;
+        font-size: 16px;
+    }
+    .headings {
+        font-size: 16px;
+    }
+}
+@media(max-width:350px) {
+    .sidebar {
+        width: auto;
+        height: auto;
+    }
+    .sidebar_menu {
+        width: 100vw;
+        height: auto;
+        font-size: 16px;
+    }
+    .headings {
+        font-size: 16px;
+    }
+} 

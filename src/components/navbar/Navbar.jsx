@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import './Navbar.css';
 import {FaMoon} from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
+//import { FaX,FaBars} from 'react-icons/fa6';
+import yan from '../../assets/yan.png';
+import Sidebar from '../sidebar/Sidebar';
 const Navbar = () => {
-
     const [theme, setTheme] = useState(
         localStorage.getItem('theme') || 'light');
     const toggleTheme = () => {
@@ -21,9 +23,7 @@ const Navbar = () => {
         <nav className='navbar_container'>
             <ul className='nav_center'>
                 <li>
-                    <NavLink to='/sidebar'>
-                        sidebar
-                    </NavLink>
+                    <img src={yan} alt='yan' className='logo'/>
                 </li>
                 <li>
                     <NavLink to='/home'>
@@ -31,13 +31,13 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/about'>
-                        about
+                    <NavLink to='/project'>
+                        projects
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/project'>
-                        project
+                    <NavLink to='/about'>
+                        about Me
                     </NavLink>
                 </li>
                 <li>

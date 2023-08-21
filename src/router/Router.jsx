@@ -1,7 +1,6 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import App from '../App';
 import { 
-    Sidebar,
     Home,
     About,
     Project,
@@ -19,10 +18,6 @@ const Router = () => {
             path:'/',
             element:<App/>,
             errorElement:<Error/>
-        },
-        {
-            path:'/sidebar',
-            element:<Sidebar/>,
         },
         {
             path:'/home',

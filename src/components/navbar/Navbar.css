@@ -1,11 +1,13 @@
 .navbar_container {
     display: flex;
+    position: relative;
+    width: 100%;
 }
 
 .nav_center {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style-type: none;
     width: 100%;
     background: #0000ff;
@@ -13,6 +15,13 @@
     transition: width 1s;
     position: absolute;
     z-index: 1;
+}
+
+
+.logo {
+    width: 50px;
+    position: absolute;
+    bottom: 30%;
 }
 
 .nav_center {
@@ -71,6 +80,12 @@ a:active {
 
     ul, li:hover {
         color:#2e8b57;
+    }
+    .logo {
+        position: absolute;
+        bottom: 78%;
+        right: 45%;
+        padding: 10px 0px 10px 0px;
     }
   
 }
