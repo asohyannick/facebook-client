@@ -1,18 +1,11 @@
+import Movies from '../movies/Movies';
 import styles from './About.module.css';
 const About = () => {
     return (
         <div>
-            about
-            <p>
-                hello
-                hello
-                hello
-                hello
-                hello
-                hello
-            </p>
+            <Movies/>
         </div>
-    )
+    );
 }
 
 export default About

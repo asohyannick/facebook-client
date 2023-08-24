@@ -7,7 +7,7 @@ import {
     fetchTours, 
     clearTours
  } from '../../redux/features/toursSlice/ToursSlice';
-clearTours
+ import Products from '../products/Products';
  const Project = () => {
     const tours = useSelector(selectAllTours);
     const [showText, setShowText] = useState(false);
@@ -19,7 +19,7 @@ clearTours
     const toggleTours = () => {
         setShowText(!showText)
     };
-    console.log(tours);
+    // console.log(tours);
     if(isLoading) {
         return <section>
             <div>
@@ -77,8 +77,9 @@ clearTours
                     ClearAll
                 </button>
             </div>
+            <Products/>
         </div>
-    )
+    );
 }
 
 export default Project

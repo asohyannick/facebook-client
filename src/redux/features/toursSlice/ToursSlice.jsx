@@ -4,7 +4,7 @@ const tours = 'https://course-api.com/react-tours-project';
 export const fetchTours = createAsyncThunk('tours/fetchTours', async (thunkAPI) => {
     try{
         const response = await axios.get(tours);
-        console.log(response);
+        // console.log(response);
         return response.data;
     } catch(error) {
         return thunkAPI.rejectWithValue('Something went wrong');
@@ -34,14 +34,14 @@ export const toursSlice = createSlice({
     extraReducers(builder) {
         builder.addCase(fetchTours.pending, (state) => {
             state.isLoading = true;
-            console.log('it is still pending');
+            //console.log('it is still pending');
         }).addCase(fetchTours.fulfilled, (state, action) => {
             state.isLoading = false;
             state.tours = action.payload;
-            console.log('successful');
-        }).addCase(fetchTours.rejected, (state, action) => {
+            //console.log('successful');
+        }).addCase(fetchTours.rejected, (state) => {
             state.isLoading = false;
-            console.log(action);
+            //console.log(action);
         })
     }
 });

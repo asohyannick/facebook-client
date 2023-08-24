@@ -1,11 +1,15 @@
-import {Navbar} from './components';
+import {
+  Navbar, 
+  SignIn, 
+  Footer,
+} from './components';
 function App() {
   return (
     <>
      <Navbar/>
-      <h1>Personal website</h1>
+     <SignIn/>
+     <Footer/>
     </>
-  )
+  );
 }
-
-export default App
+export default App;
