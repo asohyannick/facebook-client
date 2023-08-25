@@ -1,13 +1,11 @@
 import {
-  Navbar, 
-  SignIn, 
+  Navbar,  
   Footer,
 } from './components';
 function App() {
   return (
     <>
      <Navbar/>
-     <SignIn/>
      <Footer/>
     </>
   );

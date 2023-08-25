@@ -18,7 +18,7 @@ body {
     background: transparent;
     opacity: 0.7;
     animation: all;
-    transition: all;
+    transition: all 0.3s ease-out;
     border: none;
     outline: none;
     padding: 0px;
