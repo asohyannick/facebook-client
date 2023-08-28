@@ -48,7 +48,7 @@ const Products = () => {
                 onClick={() => dispatch(fetchCartItems())}
                 className={styles.refresh_btn_btn}
                 >
-                refresh cart
+                refresh your cart
             </button>
         </div>
     </header>
@@ -158,10 +158,11 @@ const Products = () => {
             <hr/>
             <div className={styles.clearCart_bg}>
                 <button 
-                    type='button'
-                    className={styles.clearCart_btn}
-                    onClick={() => dispatch(clearCart())}>
-                    clearCart
+                        type='button'
+                        className={styles.clearCart_btn}
+                        onClick={() => dispatch(clearCart())}
+                    >
+                    clear your Cart
                 </button>
             </div>
         </div>

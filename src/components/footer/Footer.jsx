@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className={styles.footer_container}>
             <ul className={styles.footer_pages}>
-                <h1 className={styles.footer_headers}>Access All Pages</h1>
+                <h1 className={styles.footer_headers}>About Me</h1>
                 <li>
                     <NavLink to='/home'>
                         Home 
@@ -12,7 +12,7 @@ const Footer = () => {
                 </li>
                 <li>
                     <NavLink to='/about'>
-                        About Me
+                        About
                     </NavLink>
                 </li>
                 <li>
@@ -28,6 +28,49 @@ const Footer = () => {
                 <li>
                     <NavLink to='/signUp'>
                         SignUp 
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/story'>
+                        Story
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/clients'>
+                        Clients 
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/testimonials'>
+                        Testimonials
+                    </NavLink>
+                </li>
+            </ul>
+            <ul className={styles.footer_pages}>
+                <h1 className={styles.footer_headers}>Services</h1>
+                <li>
+                    <NavLink to='/development'>
+                       Web and Mobile Development
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/design'>
+                       UI/UX Design
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/train'>
+                       Web dev Training
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/market'>
+                        Marketing 
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/consult'>
+                        Consulting
                     </NavLink>
                 </li>
             </ul>
@@ -94,9 +137,9 @@ const Footer = () => {
             </ul>
             <div className={styles.copyRight}>
                 <div>
-                    The website is develop and maintain by 
+                    The website is develop and  is currently maintain by 
                     <h4>Asoh Yannick Anoh</h4>
-                    <p>who is the owner of this website</p>
+                    <p>who is the developer and owner of this website</p>
                     <div>
                         <p>All Rights Reserved</p>
                         <p>@CopyRight 2023</p>

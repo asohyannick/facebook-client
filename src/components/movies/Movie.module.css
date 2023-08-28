@@ -1,0 +1,11 @@
+.carousel {
+    background: #2e8b57;
+    color: #fff;
+    height:400px;
+    font-size: 2rem;
+}
+
+.item {
+    display: flex;
+    text-align: center;
+}

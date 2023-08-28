@@ -1,32 +1,69 @@
-import React from 'react';
 import styles from './Movie.module.css';
-import { selectAllLoading, fetchDrinks, selectAllDrinks } from '../../redux/features/movieSlice/movieSlice';
-import {useDispatch, useSelector} from 'react-redux';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import yan from '../../assets/yan.png';
+import { settings } from '../carouselLogic/CarouselLogic';
 const Movies = () => {
-    const isLoading  = useSelector(selectAllLoading);
-    const jobs  = useSelector(selectAllDrinks);
-    const dispatch = useDispatch();
-    React.useEffect(() => {
-        dispatch(fetchDrinks());
-    }, [dispatch])
-    if(isLoading) {
-        return <section>
-            <h1>Loading...</h1>
-        </section>
-    }
     return (
-        <>
-          <h1>hello </h1>
-          {jobs.map((item) => {
-            const {id, category, company, image, name } = item;
-            return (
-                <main key={id}>
-                    <img src={image} alt='image'/>
-                    <h4>{name}</h4>
-                </main>
-            )
-          })}
-        </>
+        <div className={styles.carousel}>
+            <Slider {...settings}>
+                <div className={styles.item}>
+                    <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+                <div  className={styles.item}>
+                <img src={yan} alt='yan' style={{
+                        width:'100px',
+                        borderRadius:'50px'
+                    }}/>
+                </div>
+            </Slider>
+        </div>
     );
 };
 export default Movies;

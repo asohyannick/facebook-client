@@ -6,6 +6,16 @@ import {
     Project,
     SignIn,
     SignUp,
+    Story,
+    Testimonials,
+    Marketing,
+    Clients,
+    Consult,
+    Design,
+    Development,
+    Contact,
+    Training,
+    Login
  } from '../components';
 
 import {
@@ -33,12 +43,48 @@ const Router = () => {
         },
         {
             path:'/signIn',
-            element:<SignIn/>,
+            element:<Login/>,
         },
         {
             path:'/signUp',
             element:<SignUp/>,
-        }
+        },
+        {
+            path:'/story',
+            element:<Story/>,
+        },
+        {
+            path:'/testimonials',
+            element:<Testimonials/>,
+        },
+        {
+            path:'/market',
+            element:<Marketing/>,
+        },
+        {
+            path:'/clients',
+            element:<Clients/>,
+        },
+        {
+            path:'/consult',
+            element:<Consult/>,
+        },
+        {
+            path:'/design',
+            element:<Design/>,
+        },
+        {
+            path:'/development',
+            element:<Development/>,
+        },
+        {
+            path:'/contact',
+            element:<Contact/>,
+        },
+        {
+            path:'/train',
+            element:<Training/>,
+        },
     ]);
     return <RouterProvider router={router}/>
 }
