@@ -106,6 +106,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.firstName}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.firstName && <p>{errors.firstName}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -121,6 +123,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.middleName}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.middleName && <p>{errors.middleName}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -136,6 +140,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.lastName}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.lastName && <p>{errors.lastName}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -150,6 +156,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.email}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.email && <p>{errors.email}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -164,6 +172,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.password}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.password && <p>{errors.password}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -178,6 +188,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.confirmPassword}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -193,6 +205,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.position}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.position && <p>{errors.position}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -208,6 +222,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.company}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.company && <p>{errors.company}</p>}
                                         </div>
                                         <div className={styles.form_show}>
@@ -224,6 +240,8 @@ const SignIn = ({submitForm}) => {
                                                 value={values.image}
                                                 onChange={handleChange}
                                             />
+                                        </div>
+                                        <div className={styles.values_text}>
                                             {errors.image && <p>{errors.image}</p>}
                                         </div>
                                     </div>

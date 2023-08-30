@@ -123,6 +123,15 @@
     margin: 25px 0px 25px 0px;
 }
 
+.values_text {
+    color: #f00e0e;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-align: left;
+    margin-left: 8rem;
+    font-weight: bolder;
+}
+
 .form_label {
     border: 2px solid white;
     border-right: none;
@@ -231,5 +240,9 @@
     }
     .final_btn:hover {
         background: #059669;
+    }
+    .values_text {
+        position: relative;
+        right: 34%;
     }
 }
