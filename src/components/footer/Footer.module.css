@@ -25,6 +25,8 @@ a {
 .footer_headers {
     margin-bottom: 10px;
     color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .footer_pages, li {
@@ -36,21 +38,26 @@ a {
     color: purple;
 }
 
-.copyRight {
+.copyText {
     position: absolute;
-    top: 40%;
-    padding: 10px;
+    right: 30%;
+    top: 95%;
+    left: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.copyText > p {
+    color: #fff;
 }
 
 @media(max-width:790px) {
     .footer_container {
         width: auto;
-        height: 100vh;
+        height: auto;
         font-size: 16px;
-        margin: 0 auto;
-        overflow: hidden;
         flex-wrap: wrap;
-        padding: 0px;
+        padding-top: 5px;
     }
     .footer_headers {
         font-size: 16px;
@@ -60,10 +67,7 @@ a {
     .footer_pages {
         padding: 0px 10px 0px 10px;
     }
-    .copyRight {
-        position: absolute;
-        top: 85%;
-        background: #1b1b32;
-        width: 100vw;
+    .copyText {
+        display: none;
     }
 }

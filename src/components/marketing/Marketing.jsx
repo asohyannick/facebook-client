@@ -1,11 +1,12 @@
-import React from 'react';
-import styles from './Marketing.module.css';
+import React from 'react'
+
 const Marketing = () => {
-    return (
-        <div>
-            My marketing strategy
-        </div>
-    )
+  return (
+    <div>
+      market page
+    </div>
+  )
 }
 
 export default Marketing
+

@@ -8,17 +8,22 @@ import {
     FaUserLarge,
     FaFileCsv,
 } from 'react-icons/fa6'
-import validate from '../formValidation/validateInfo/ValidateInfo';
-import UseForm from '../formValidation/useForm/UseForm';
 import fb from '../../assets/fb.jpeg';
 import google from '../../assets/google.png';
 import link from '../../assets/link.png';
 import line from '../../assets/line.png';
 import styles from './SignIn.module.css';
-import Footer from '../footer/Footer'
 import MoonLoader from 'react-spinners/MoonLoader';
-import Form from '../formValidation/form/Form';
-const SignIn = ({submitForm}) => {
+const SignIn = () => {
+    const [firstName, setFirstName] = useState('');
+    const [middleName, setMiddleName] = useState('');
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassWord] = useState('');
+    const [position, setPosition] = useState('');
+    const [company, setCompany] = useState('');
+    const [uploadImage, setUploadImage] = useState('');
     const [star, setStar] = useState(false);
     React.useEffect(() => {
         setStar(true);
@@ -29,10 +34,10 @@ const SignIn = ({submitForm}) => {
             clearTimeout(starTimeout);
         }
     }, []);
- const {handleChange, handleSubmit, values, errors} = UseForm(
-    submitForm,
-    validate
- );
+    const handleSubmit = e => {
+        e.preventDefault();
+        console.log(e);
+    }
     return (
        <>
             <div className={styles.star_form}>
@@ -103,12 +108,9 @@ const SignIn = ({submitForm}) => {
                                                 maxLength={15} 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.firstName}
-                                                onChange={handleChange}
+                                                value={firstName}
+                                                onChange={(e) => setFirstName(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.firstName && <p>{errors.firstName}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='middle_name' className={styles.form_label}>
@@ -120,12 +122,9 @@ const SignIn = ({submitForm}) => {
                                                 maxLength={15} 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.middleName}
-                                                onChange={handleChange}
+                                                value={middleName}
+                                                onChange={(e) => setMiddleName(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.middleName && <p>{errors.middleName}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='last_name' className={styles.form_label}>
@@ -137,12 +136,9 @@ const SignIn = ({submitForm}) => {
                                                 maxLength={15} 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.lastName}
-                                                onChange={handleChange}
+                                                value={lastName}
+                                                onChange={(e) => setLastName(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.lastName && <p>{errors.lastName}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='email' className={styles.form_label}>
@@ -153,12 +149,9 @@ const SignIn = ({submitForm}) => {
                                                 name='email' 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.email}
-                                                onChange={handleChange}
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.email && <p>{errors.email}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='password' className={styles.form_label}>
@@ -169,12 +162,9 @@ const SignIn = ({submitForm}) => {
                                                 name='password' 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.password}
-                                                onChange={handleChange}
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.password && <p>{errors.password}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='password' className={styles.form_label}>
@@ -185,12 +175,9 @@ const SignIn = ({submitForm}) => {
                                                 name='password' 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.confirmPassword}
-                                                onChange={handleChange}
+                                                value={confirmPassword}
+                                                onChange={(e) => setConfirmPassWord(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='position' className={styles.form_label}>
@@ -202,12 +189,9 @@ const SignIn = ({submitForm}) => {
                                                 maxLength={20} 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.position}
-                                                onChange={handleChange}
+                                                value={position}
+                                                onChange={(e) => setPosition(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.position && <p>{errors.position}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='company' className={styles.form_label}>
@@ -219,12 +203,9 @@ const SignIn = ({submitForm}) => {
                                                 maxLength={20} 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.company}
-                                                onChange={handleChange}
+                                                value={company}
+                                                onChange={(e) => setCompany(e.target.value)}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.company && <p>{errors.company}</p>}
                                         </div>
                                         <div className={styles.form_show}>
                                             <label htmlFor='file' className={styles.form_label}>
@@ -237,12 +218,9 @@ const SignIn = ({submitForm}) => {
                                                 maxLength={15} 
                                                 className={styles.form_input} 
                                                 required
-                                                value={values.image}
-                                                onChange={handleChange}
+                                                value={uploadImage}
+                                                onChange={(e) => setUploadImage(e.target.files[0])}
                                             />
-                                        </div>
-                                        <div className={styles.values_text}>
-                                            {errors.image && <p>{errors.image}</p>}
                                         </div>
                                     </div>
                                     <button type='submit' className={styles.btn_btn}>
@@ -250,7 +228,6 @@ const SignIn = ({submitForm}) => {
                                     </button>
                                 </form>
                             </article>     
-                            <Footer/>  
                         </div>
                 }
             

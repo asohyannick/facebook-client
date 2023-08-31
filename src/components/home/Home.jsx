@@ -1,34 +1,60 @@
+import {useSelector, useDispatch} from 'react-redux';
+import { fetchGoods, selectHomeIsLoading, selectPeopleArr } from '../../redux/features/homeSlice/homeSlice';
 import React from 'react';
-import './Home.css';
+import styles from './Home.module.css';
 import Movies from '../movies/Movies';
-import Footer from '../footer/Footer'
-import menu from '../../data/data';
-import Categories from './Categories';
-import Menu from './Menu';
-const allCategories = ['all', ...new Set(menu.map((menu
-    ) => menu.category))];
+import {Link} from 'react-router-dom';
 const Home = () => {
- const [menuItems, setMenuItems] = React.useState(menu);
- const [categories, setCategories] = React.useState(allCategories);
- const filterItems = (category) => {
-    if(category === 'all') {
-        setMenuItems(menu);
-        return;
+    const dispatch = useDispatch();
+    const isLoading = useSelector(selectHomeIsLoading);
+    const people = useSelector(selectPeopleArr);
+    React.useEffect(() => {
+        dispatch(fetchGoods());
+    }, [dispatch]);
+    if(isLoading) {
+        return <h1 style={{ textAlign:'center'}}>Loading...</h1>
     }
-    const newItems = menu.filter((item
-        ) => item.category ===category);
-    setMenuItems(newItems);
- };
- return (
-        <main>
-            <section className='menu section'>
-                <div className='title'>
-                    <h2>Our menu</h2>
-                    <div className='underline'></div>
-                </div>
-                <Menu/>
-            </section>
-        </main>
-    );
-};
-export default Home;
+  return (
+   <>
+        <div>
+          <h1 
+           style={{
+            textAlign:'center',
+            fontSize:'20px',
+            margin:'20px 0px 20px',
+            fontWeight:'bolder',
+            textTransform:'capitalize'
+           }}
+          >My Potential Github Followers who constantly work with me  to build cool web and mobile apps.</h1>
+        </div>
+     <div className={styles.followers}>
+        {people.map((person) => {
+            const {id, 
+                html_url, 
+                avatar_url, 
+                login,
+            } = person;
+            return (
+                <article key={id} className={styles.card}>
+                    <img src={avatar_url} alt={login}/>
+                    <h4>${login}</h4>
+                    <div>
+                        <h4>${login}</h4>
+                        <li>
+                            <Link to={html_url}>View Profile</Link>    
+                        </li>
+                    </div>
+                </article>
+            )
+        })}
+    </div>
+    <div>
+        <Movies/>
+    </div>
+   </>
+  )
+}
+
+export default Home
+
+

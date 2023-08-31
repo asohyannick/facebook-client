@@ -27,7 +27,7 @@ export const homeSlice = createSlice({
         })
         .addCase(fetchGoods.fulfilled, (state, action) => {
             state.isLoading = false;
-            state.goods = action.payload;
+            state.people = action.payload;
             //console.log(action);
             console.log(`We have successfully fetch the api from the server.`);
         })

@@ -93,7 +93,7 @@ const Footer = () => {
                 </li>
                 <li>
                     <NavLink to='https://chat.whatsapp.com/JSb4tyFiUknK82YI5V3TZN'>
-                        Whatsapp
+                        Whatsapp Contact +237654426490
                     </NavLink>
                 </li>
                 <li>
@@ -134,20 +134,20 @@ const Footer = () => {
                      Frontend Certified Developer
                     </NavLink>
                 </li>
-            </ul>
-            <div className={styles.copyRight}>
-                <div>
-                    The website is develop and  is currently maintain by 
-                    <h4>Asoh Yannick Anoh</h4>
-                    <p>who is the developer and owner of this website</p>
-                    <div>
-                        <p>All Rights Reserved</p>
-                        <p>@CopyRight 2023</p>
+                <div className={styles.copyRight}>
+                    <div className={styles.copyText}>
+                        <p>
+                            The website is develop and  is currently maintain by
+                            Asoh Yannick Anoh
+                            who is the developer and owner of this website
+                            All Rights Reserved
+                            @CopyRight 2023
+                        </p>
                     </div>
-                </div>
-            </div>  
+                </div>  
+            </ul>
         </footer>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

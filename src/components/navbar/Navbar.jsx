@@ -74,13 +74,14 @@ const Navbar = () => {
             <nav 
                 className='navbar_container' 
             >
-                <ul className='nav_center'
+                <ul className='nav_Center'
                 
                 >
                     <li
                     className='nav-item'
                     >
-                        <img src={yan} alt='yan' className='logo'/>
+                        <img src={yan} alt='yan' 
+                        className='logo'/>
                     </li>
                     <li 
                         className='nav-item'

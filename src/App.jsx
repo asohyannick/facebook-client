@@ -2,6 +2,9 @@ import React,{useState} from 'react';
 import {
   Navbar,  
   Footer,
+  About,
+  Testimonials,
+  Home
 } from './components';
 import styles from './App.module.css'
 import  GridLoader from "react-spinners/GridLoader";
@@ -27,6 +30,9 @@ function App() {
         : 
         <div>
           <Navbar/>
+          <Testimonials/>
+          <About/>
+          <Home/>
           <Footer/>
         </div>
       }

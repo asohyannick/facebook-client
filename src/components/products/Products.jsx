@@ -162,7 +162,7 @@ const Products = () => {
                         className={styles.clearCart_btn}
                         onClick={() => dispatch(clearCart())}
                     >
-                    clear your Cart
+                    clear your Cart 
                 </button>
             </div>
         </div>

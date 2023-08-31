@@ -121,7 +121,7 @@
     width: 100%;
 }
 
-.nav_center {
+.nav_Center {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -167,7 +167,7 @@
     border-radius: 100px;
 }
 
-.nav_center {
+.nav_Center {
  width: 100%;
 }
 
@@ -189,7 +189,7 @@ a:active {
 }
 
 .dark {
-    background-color: #333;
+    background-color: rgb(33, 31, 31);
     color: #fff;
     cursor: pointer;
 }
@@ -204,8 +204,9 @@ a:active {
         width:100vw;
         height: 100vh;
         background: #663399;
+        
     }
-    .nav_center {
+    .nav_Center {
         display: flex;
         flex-direction:column;
         text-align: center;
@@ -216,8 +217,8 @@ a:active {
         padding-top: 350px;
     }
     .nav_container {
-        width: auto;
-        height: auto;
+      width: auto;
+      height: auto;
     }
     .nav-links {
         color:#fff;

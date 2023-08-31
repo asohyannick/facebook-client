@@ -1,9 +1,8 @@
-import React from 'react'
-import styles from './Design.module.css';
+import Movies from '../movies/Movies';
 const Design = () => {
     return (
         <div>
-            I am a ux/ui designer.
+            <Movies/>
         </div>
     )
 }

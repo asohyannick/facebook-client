@@ -17,6 +17,7 @@ import {default as Contact} from './contact/Contact';
 import {default as Training} from './training/Training';
 import {default as Form} from './formValidation/form/Form';
 import {default as Login} from './login/Login';
+import {default as Products} from './products/Products';
 export {
     Navbar,
     Home,
@@ -36,5 +37,6 @@ export {
     Contact,
     Training,
     Form,
-    Login
+    Login,
+    Products
 }
