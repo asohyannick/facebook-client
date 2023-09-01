@@ -76,7 +76,7 @@ const Products = () => {
             {cart.map((shop) => {
                 const {id, img, price,title, amount } = shop;
                 return(
-                    <article key={id} className={styles.cart_container}>
+                    <div key={id} className={styles.cart_container}>
                         <div className={styles.cart_content}>
                             <div>
                                 <img src={img} alt='Still loading' className={styles.cart_image}/>
@@ -135,7 +135,7 @@ const Products = () => {
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </div>
                 );
             })}
             <div>

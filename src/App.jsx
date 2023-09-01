@@ -4,7 +4,7 @@ import {
   Footer,
   About,
   Testimonials,
-  Home
+  Home,
 } from './components';
 import styles from './App.module.css'
 import  GridLoader from "react-spinners/GridLoader";

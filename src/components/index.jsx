@@ -15,9 +15,9 @@ import {default as Design} from './design/Design';
 import {default as Development} from './development/Development';
 import {default as Contact} from './contact/Contact';
 import {default as Training} from './training/Training';
-import {default as Form} from './formValidation/form/Form';
-import {default as Login} from './login/Login';
 import {default as Products} from './products/Products';
+import {default as Tours} from './products/Products';
+
 export {
     Navbar,
     Home,
@@ -36,7 +36,6 @@ export {
     Development,
     Contact,
     Training,
-    Form,
-    Login,
-    Products
+    Products,
+    Tours
 }

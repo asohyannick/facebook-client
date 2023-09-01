@@ -15,8 +15,7 @@ import {
     Development,
     Contact,
     Training,
-    Login
- } from '../components';
+} from '../components';
 
 import {
     Error
@@ -43,7 +42,7 @@ const Router = () => {
         },
         {
             path:'/signIn',
-            element:<Login/>,
+            element:<SignIn/>,
         },
         {
             path:'/signUp',

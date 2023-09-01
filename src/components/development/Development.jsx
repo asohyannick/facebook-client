@@ -1,8 +1,8 @@
-import styles from './Development.module.css';
+import  Tours  from '../tours/Tours';
 const Development = () => {
     return (
         <div>
-            Development page
+            <Tours/>
         </div>
     )
 }

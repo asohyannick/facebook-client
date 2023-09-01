@@ -35,7 +35,7 @@ const Home = () => {
                 login,
             } = person;
             return (
-                <article key={id} className={styles.card}>
+                <div key={id} className={styles.card}>
                     <img src={avatar_url} alt={login}/>
                     <h4>${login}</h4>
                     <div>
@@ -44,7 +44,7 @@ const Home = () => {
                             <Link to={html_url}>View Profile</Link>    
                         </li>
                     </div>
-                </article>
+                </div>
             )
         })}
     </div>

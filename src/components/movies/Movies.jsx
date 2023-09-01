@@ -13,12 +13,17 @@ const Movies = () => {
     if(isLoading) {
         return <section>
                  <h1 style={{
-            textAlign:'center'
+            textAlign:'center',
+            fontSize:'16px'
             }}>Please wait a moment...</h1>
         </section>
     }
     return (
       <div className={styles.card_container}>
+        <h1 style={{
+            fontSize:'20px',
+            textAlign:'center'
+        }}>We make online shopping super easy for everyone</h1>
         {food.map((item) => {
             const {
                 id, 
@@ -30,7 +35,7 @@ const Movies = () => {
                 price
             } = item;
             return (
-                <article key={id} className={styles.single_card}>
+                <div key={id} className={styles.single_card}>
                     <img src={image} alt={name} 
                         className={styles.card_img}/>
                            <div className={styles.card_info}>
@@ -49,7 +54,7 @@ const Movies = () => {
                             className={styles.delete_btn} onClick={() => dispatch(removeOne(id))}>
                             not interested
                         </button>
-                </article>
+                </div>
             )
         })}
       </div>

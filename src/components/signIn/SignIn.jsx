@@ -13,7 +13,7 @@ import google from '../../assets/google.png';
 import link from '../../assets/link.png';
 import line from '../../assets/line.png';
 import styles from './SignIn.module.css';
-import MoonLoader from 'react-spinners/MoonLoader';
+import Footer from '../footer/Footer';
 const SignIn = () => {
     const [firstName, setFirstName] = useState('');
     const [middleName, setMiddleName] = useState('');
@@ -24,64 +24,55 @@ const SignIn = () => {
     const [position, setPosition] = useState('');
     const [company, setCompany] = useState('');
     const [uploadImage, setUploadImage] = useState('');
-    const [star, setStar] = useState(false);
-    React.useEffect(() => {
-        setStar(true);
-        const starTimeout = setTimeout(() => {
-            setStar(false);
-        }, 1000);
-        return () => {
-            clearTimeout(starTimeout);
-        }
-    }, []);
     const handleSubmit = e => {
         e.preventDefault();
         console.log(e);
     }
     return (
+        
        <>
-            <div className={styles.star_form}>
-                {
-                    star ? <MoonLoader color={'#008000'} size={100}/> :
-                        <div>
-                          <article className={styles.signIn_container}>
-                                <div className={styles.login_container}>
-                                    <h1 className={styles.platformOne}>Welcome to our cloud management infrastructure dearest customer</h1>
-                                    <br/>
-                                    <p className={styles.platformTwo}>
-                                        Please to continue using 
-                                        our services and stay
-                                        connected with us,
-                                        kindly login.
-                                    </p>
-                                    <div className={styles.account}>
-                                        <h4 className={styles.platformTwo}>Don't have an account?</h4>
-                                        <h4 className={styles.platformTwo}>No worries, please sign up for an account.</h4>
-                                        <div>
-                                            <button type='button' 
-                                                className={styles.signIn_btn}>
-                                                <Link to='/signUp'>SignUp</Link>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <form className={styles.form_container} onSubmit={handleSubmit} noValidate>
-                                    <h1 className={styles.header}>
-                                        Welcome back to our awesome cloud management platform.
-                                        <br/> Please login into your account.
-                                    </h1>
-                                    <div className={styles.last_container}>
-                                            <h5 className={styles.final_text}>
-                                                Don't have an account? 
-                                            </h5>
-                                            <span className={styles.final_text}>Please sign up for an account</span>
-                                            <div>
-                                                <button type='button' className={styles.final_btn}>
-                                                    <Link to='/signUp'>SignUp</Link>
-                                                </button>
-                                            </div>
-                                    </div>
-                                    <div className={styles.icons_container}>
+            <div className={styles.signIn_container}>
+                <div className={styles.login_container}>
+                    <h1 className={styles.platformOne}>Welcome to our cloud management 
+                    infrastructure dearest customer
+                    </h1>
+                    <br/>
+                    <p className={styles.platformTwo} style={{
+                            color:'white'
+                        }}>
+                        Please to continue using 
+                        our services and stay
+                            connected with us,
+                            kindly login.                    
+                    </p>
+                    <div className={styles.account}>
+                            <h4 className={styles.platformTwo}>Don't have an account?</h4>
+                            <h4 className={styles.platformTwo}>No worries, please sign up for an account.</h4>
+                                <div>
+                                    <button type='button' 
+                                        className={styles.signIn_btn}>
+                                        <Link to='/signUp'>SignUp</Link>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                    <form className={styles.form_container} onSubmit={handleSubmit} noValidate>
+                        <h1 className={styles.header}>
+                            Welcome back to our awesome cloud management platform.
+                            <br/> Please login into your account.
+                        </h1>
+                        <div className={styles.last_container}>
+                            <h5 className={styles.final_text}>
+                                Don't have an account? 
+                            </h5>
+                                <span className={styles.final_text}>Please sign up for an account</span>
+                            <div>
+                                <button type='button' className={styles.final_btn}>
+                                    <Link to='/signUp'>SignUp</Link>
+                                </button>
+                            </div>
+                        </div>
+                        <div className={styles.icons_container}>
                                         <span className={styles.icons}>
                                             <img src={fb} alt='company' className={styles.social}/>
                                         </span>
@@ -96,7 +87,7 @@ const SignIn = () => {
                                         <img src={line} alt='line' className={styles.lines}/>
                                         <div className={styles.last_text}>Or</div>
                                         <img src={line} alt='line' className={styles.lines}/>
-                                    </div>
+                                    </div>          
                                     <div className={styles.form_row}>
                                         <div className={styles.form_show}>
                                             <label htmlFor='first_name' className={styles.form_label}>
@@ -223,18 +214,13 @@ const SignIn = () => {
                                             />
                                         </div>
                                     </div>
-                                    <button type='submit' className={styles.btn_btn}>
-                                        Submit
-                                    </button>
-                                </form>
-                            </article>     
-                        </div>
-                }
-            
-            </div>
-          
+                        <button type='submit' className={styles.btn_btn}>
+                            Submit
+                        </button>          
+                    </form>  
+            </div>   
        </>
-    )
+    );
 }
 
 export default SignIn

@@ -14,7 +14,7 @@ font-weight: bold;
 }
 
 .card_img {
-    width: 100%;
+    width: 50%;
     height: 20rem;
     object-fit: cover;
     border: 5%;
@@ -22,8 +22,7 @@ font-weight: bold;
 }
 
 .card_info {
-    background: #fff;
-    color: #808080;
+    color:#fbfffd;
 }
 
 .btn_container {
